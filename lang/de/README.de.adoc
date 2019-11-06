@@ -1,0 +1,29 @@
+*link:../../README.adoc[English],
+link:../../lang/es/README.es.adoc[Español],
+link:../../lang/fr/README.fr.adoc[Français],
+link:../../lang/zh-cn/README.zh-cn.adoc[简体中文],
+link:../../lang/zh-tw/README.zh-tw.adoc[正體中文]*
+
+= UML-Diagramm für Zim
+
+Mit diesem https://zim-wiki.org[Zim]-Plugin können Sie ein UML-Diagramm in eine Seite einfügen.
+
+Es basiert auf http://plantuml.com[PlantUML], die wie https://graphviz.org[GraphViz], Sie Diagramme mit einem Skriptsprache zeichnen können.
+
+== Installation
+
+* Installieren Sie PlantUML mit Ihrem üblichen Paketverwaltung.
+
+TIP: Verwenden Sie https://brew.sh[Homebrew] mit macOS oder https://scoop.sh[Scoop] mit Windows. Diese Tools sind schnell eingerichtet und erfordern keine Administratorrechte.
+
+* Öffnen Sie den Plugin Ordner. Gehen Sie in Zim zu *Bearbeiten* > *Einstellungen* > *Plugins*-Registerkarte und klicken Sie auf die *Öffne Plugin Ordner*-Schaltfläche.
+* Laden Sie die Datei link:umldiagrameditor.de.py[] und verschieben Sie sie in diesen Ordner.
+* Starten Sie Zim neu.
+* In *Bearbeiten* > *Einstellungen* > *Plugins*-Registerkarte können Sie jetzt tick *☐ UML-Diagramm einfügen*.
+
+== Danksagung
+
+Dieses Plugin ist eine Anpassung der Plugins https://github.com/rolfkleef/zim-plantuml[zim-plantuml von Rolf Kleef] und https://github.com/zim-desktop-wiki/zim-desktop-wiki/blob/master/zim/plugins/ditaaeditor.py[ditaaeditor.py von Yao-Po Wang].
+
+Dank an die jeweiligen Autoren.
+

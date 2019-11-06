@@ -1,0 +1,29 @@
+*link:../../lang/de/README.de.adoc[Deutsch],
+link:../../README.adoc[English],
+link:../../lang/es/README.es.adoc[Español],
+link:../../lang/fr/README.fr.adoc[Français],
+link:../../lang/zh-cn/README.zh-cn.adoc[简体中文]*
+
+= UML圖為Zim
+
+這個link:https://zim-wiki.org[Zim]插件可讓你在頁面中插入UML圖。
+
+它依賴於link:http://plantuml.com[PlantUML]，就像link:https://graphviz.org[GraphViz]一樣，它使你可以使用腳本語言編寫圖。
+
+== 安裝
+
+* 使用通常的軟件包管理系統安裝PlantUML。
+
+TIP: 在macOS上使用link:https://brew.sh[Homebrew]，在Windows上使用link:https://scoop.sh[Scoop]。這些工具可以快速設置，不需要管理員權限。
+
+* 打開插件文件夾。在Zim中，轉到 *編輯* > *首選項* > *插件* 分頁，單擊 *打開插件文件夾* 按鈕。
+* 下載link:umldiagrameditor.zh-tw.py[]文件。將其移動到該文件夾。
+* 重新啟動Zim。
+* 轉到 *編輯* > *首選項* > *插件* 分頁，現在可以勾選 *☐ 插入UML圖* 。
+
+== 致謝
+
+該插件改編自link:https://github.com/rolfkleef/zim-plantuml[Rolf Kleef的zim-plantuml插件]和link:https://github.com/zim-desktop-wiki/zim-desktop-wiki/blob/master/zim/plugins/ditaaeditor.py[王堯坡的ditaaeditor.py插件]。
+
+感謝他們各自的作者。
+
