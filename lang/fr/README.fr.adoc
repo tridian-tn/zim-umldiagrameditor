@@ -6,7 +6,7 @@ link:../../lang/zh-tw/README.zh-tw.adoc[正體中文]*
 
 = Diagrammes UML pour Zim
 
-Ce plugin pour https://zim-wiki.org[Zim] vous permet d’insérer des diagramme UML dans une page.
+Ce plugin pour https://zim-wiki.org[Zim] vous permet d’insérer des diagrammes UML dans une page.
 
 Il repose sur http://plantuml.com[PlantUML] qui, à l’image de https://graphviz.org[GraphViz], permet de dessiner des diagrammes avec un script.
 
