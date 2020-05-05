@@ -23,7 +23,7 @@ TIP: Utilisez https://brew.sh[Homebrew] pour macOS ou https://scoop.sh[Scoop] po
 
 == Remerciements
 
-Ce plugin est une adaption de https://github.com/rolfkleef/zim-plantuml[zim-plantuml
+Ce plugin est une adaptation de https://github.com/rolfkleef/zim-plantuml[zim-plantuml
  de Rolf Kleef] et de https://github.com/zim-desktop-wiki/zim-desktop-wiki/blob/master/zim/plugins/ditaaeditor.py[ditaaeditor.py de Yao-Po Wang].
 
 Merci à leurs auteurs respectifs.
