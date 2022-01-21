@@ -20,6 +20,8 @@ TIP: Use https://brew.sh[Homebrew] with macOS or https://scoop.sh[Scoop] with Wi
 * Download the link:umldiagrameditor.py[] file and move it to that folder.
 * Restart Zim.
 * In *Edit* > *Preferences* > *Plugins* tab, you can now tick *☐ Insert UML diagram*.
+    * If you want to spice up your plantuml style with some style sheets, you can configure the base dir for looking for those files
+    * See https://gist.github.com/jerieljan/4c82515ff5f2b2e4dd5122d354a82b7e[here] for an example
 
 == Acknowledgements
 
@@ -27,3 +29,4 @@ This plugin is adapted from https://github.com/rolfkleef/zim-plantuml[Rolf Kleef
 
 Thanks to their respective authors.
 
+* the default plantuml styles shipped are from https://gist.github.com/jerieljan/4c82515ff5f2b2e4dd5122d354a82b7e[Jeriel Jan del Prado ]
