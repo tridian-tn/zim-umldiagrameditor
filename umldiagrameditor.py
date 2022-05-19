@@ -57,10 +57,11 @@ class BackwardPlantumlImageObjectType(BackwardImageGeneratorObjectType):
 	label = _('UML Diagram') # T: menu item
 	syntax = 'plantuml'
 	scriptname = 'umldiagram.puml'
-	imagefile_extension = '.png'
 
 
 class PlantumlGenerator(ImageGeneratorClass):
+
+	imagefile_extension = '.png'
 
 	def __init__(self, plugin, notebook, page):
 		ImageGeneratorClass.__init__(self, plugin, notebook, page)
