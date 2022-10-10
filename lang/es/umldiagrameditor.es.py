@@ -10,7 +10,7 @@
 # Author: Voyvode <voyvode@yandex.com>
 # Date: 2019-11-06
 
-
+import logging
 from zim.plugins import PluginClass
 from zim.plugins.base.imagegenerator \
 	import ImageGeneratorClass, BackwardImageGeneratorObjectType
@@ -18,6 +18,9 @@ from zim.plugins.base.imagegenerator \
 from zim.fs import File, TmpFile
 from zim.config import data_file
 from zim.applications import Application, ApplicationError
+import os
+
+logger = logging.getLogger('zim.plugins.umldiagrameditor')
 
 
 # TODO put these commands in preferences
@@ -35,6 +38,13 @@ Este plugin permite la edición de diagramas UML con PlantUML.
 		'author': 'Voyvode',
 	}
 
+
+	plugin_preferences = (
+		# key, type, label, default
+		('style_config_base_dir', 'string', _('Base directory for uml style file'), ""),
+	)
+
+
 	@classmethod
 	def check_dependencies(klass):
 		has_dotcmd = Application(dotcmd).tryexec()
@@ -47,10 +57,11 @@ class BackwardPlantumlImageObjectType(BackwardImageGeneratorObjectType):
 	label = _('Diagrama UML') # T: menu item
 	syntax = 'plantuml'
 	scriptname = 'umldiagram.puml'
-	imagefile_extension = '.png'
 
 
 class PlantumlGenerator(ImageGeneratorClass):
+
+	imagefile_extension = '.png'
 
 	def __init__(self, plugin, notebook, page):
 		ImageGeneratorClass.__init__(self, plugin, notebook, page)
@@ -60,6 +71,24 @@ class PlantumlGenerator(ImageGeneratorClass):
 
 	def generate_image(self, text):
 		# Write to tmp file
+
+		# add custom preamble
+		# See 
+		# https://gist.github.com/jerieljan/4c82515ff5f2b2e4dd5122d354a82b7e
+		preferences = self.plugin.preferences
+		style_config_dir = preferences["style_config_base_dir"]
+		if style_config_dir:
+			plant_uml_style_path = os.path.abspath(
+				os.path.expanduser(style_config_dir)
+			)
+			preamble = (
+				"@startuml\n"
+				f"\t!define BASEPATH {plant_uml_style_path}\n"
+				"\t!include BASEPATH/stylesheet.iuml"
+			)
+			text = text.replace("@startuml", preamble, 1)
+		logger.debug(text)
+
 		self.dotfile.writelines(text)
 
 		# Call PlantUML
