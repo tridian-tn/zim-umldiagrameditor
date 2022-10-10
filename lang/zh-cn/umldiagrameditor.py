@@ -1,4 +1,4 @@
-# umldiagrameditor.zh-cn.py
+# umldiagrameditor.py (简体中文)
 #
 # This Zim plugin allows you to insert a UML diagram in a page.
 #

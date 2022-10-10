@@ -1,4 +1,4 @@
-# umldiagrameditor.de.py
+# umldiagrameditor.py (français)
 #
 # This Zim plugin allows you to insert a UML diagram in a page.
 #
@@ -30,11 +30,11 @@ dotcmd = ('plantuml')
 class InsertPlantumlPlugin(PluginClass):
 
 	plugin_info = {
-		'name': _('UML-Diagramm einfügen'), # T: plugin name
+		'name': _('Insérer un diagramme UML'), # T: plugin name
 		'description': _('''\
-Dieses Plugin bietet einen auf PlantUML basierenden Diagrammeditor.
+Ce plugin permet l’édition de diagramme UML avec PlantUML.
 '''), # T: plugin description
-        'help': 'Plugins:UML-Diagrammeditor',
+        'help': 'Plugins:Éditeur de diagramme UML',
 		'author': 'Voyvode',
 	}
 
@@ -54,7 +54,7 @@ Dieses Plugin bietet einen auf PlantUML basierenden Diagrammeditor.
 class BackwardPlantumlImageObjectType(BackwardImageGeneratorObjectType):
 
 	name = 'image+umldiagram'
-	label = _('UML-Diagramm') # T: menu item
+	label = _('Diagramme UML') # T: menu item
 	syntax = 'plantuml'
 	scriptname = 'umldiagram.puml'
 

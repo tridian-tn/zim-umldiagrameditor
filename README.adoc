@@ -1,8 +1,8 @@
-*link:lang/de/README.de.adoc[Deutsch],
-link:lang/es/README.es.adoc[Español],
-link:lang/fr/README.fr.adoc[Français],
-link:lang/zh-cn/README.zh-cn.adoc[简体中文],
-link:lang/zh-tw/README.zh-tw.adoc[正體中文]*
+*link:lang/de/README.adoc[Deutsch],
+link:lang/es/README.adoc[español],
+link:lang/fr/README.adoc[français],
+link:lang/zh-cn/README.adoc[简体中文],
+link:lang/zh-tw/README.adoc[正體中文]*
 
 = UML diagrams for Zim
 
