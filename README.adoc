@@ -16,6 +16,8 @@ It relies on http://plantuml.com[PlantUML] which, like http://graphviz.org[Graph
 
 TIP: Use https://brew.sh[Homebrew] with macOS or https://scoop.sh[Scoop] with Windows. These tools are quick to set up and don’t require administrator rights.
 
+TIP: **TN edit**. For Windows, installing PlantUML via scoop will install a shim to `C:\Users\username\scoop\shims`. In there will be a plantuml.cmd file. This is directly referenced in my fork here, to avoid the case where the dependency was resolved, but `plantuml` wasn't found when running.
+
 * Open the plugins folder. In Zim, go to *Edit* > *Preferences* > *Plugins* tab and click on the *Open plugins folder* button.
 * Download the link:umldiagrameditor.py[] file and move it to that folder.
 * Restart Zim.
