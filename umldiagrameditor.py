@@ -25,6 +25,8 @@ logger = logging.getLogger('zim.plugins.umldiagrameditor')
 
 # TODO put these commands in preferences
 dotcmd = ('plantuml')
+# Windows fix with scoop-sourced PlantUML: resolve the dependency with dotcmd, but use this below to run it
+dotcmdwithext = ('plantuml.cmd')
 
 
 class InsertPlantumlPlugin(PluginClass):
@@ -95,7 +97,7 @@ class PlantumlGenerator(ImageGeneratorClass):
 
 		# Call PlantUML
 		try:
-			dot = Application(dotcmd)
+			dot = Application(dotcmdwithext)
 			dot.run((self.pngfile, self.dotfile))
 		except ApplicationError:
 			return None, None # Sorry, no log
