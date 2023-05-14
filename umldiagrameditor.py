@@ -57,6 +57,8 @@ class BackwardPlantumlImageObjectType(BackwardImageGeneratorObjectType):
 	label = _('UML Diagram') # T: menu item
 	syntax = 'plantuml'
 	scriptname = 'umldiagram.puml'
+	imagefile_extension = '.png' # For backward compatibility, should be removed after Apr. 2025
+
 
 
 class PlantumlGenerator(ImageGeneratorClass):
